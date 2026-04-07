@@ -1,0 +1,23 @@
+/* scilence — STEAMCO Design System Foundation
+   https://github.com/ACME-STEAMCO/scilence
+   Canonical source of truth for all STEAMCO products. */
+
+/* ===== 6. SHADOWS ===== */
+:root {
+	/* Light theme shadows (default) */
+	--s-shadow-sm: 0 1px 2px oklch(0 0 0 / 0.08), 0 1px 3px oklch(0 0 0 / 0.04);
+	--s-shadow-md: 0 2px 4px oklch(0 0 0 / 0.08), 0 4px 8px oklch(0 0 0 / 0.06);
+	--s-shadow-lg: 0 8px 16px oklch(0 0 0 / 0.12), 0 4px 8px oklch(0 0 0 / 0.08);
+	--s-shadow-xl: 0 12px 24px oklch(0 0 0 / 0.16), 0 6px 12px oklch(0 0 0 / 0.1);
+
+	/* Legacy aliases */
+	--s-shadow-subtle: var(--s-shadow-sm);
+	--s-shadow-float: var(--s-shadow-lg);
+
+	/* Icon sizes */
+	--s-icon-xs: calc(var(--s-font-size-active) * 0.75);
+	--s-icon-sm: calc(var(--s-font-size-active) * 1);
+	--s-icon-md: calc(var(--s-font-size-active) * 1.25);
+	--s-icon-lg: calc(var(--s-font-size-active) * 1.5);
+	--s-icon-xl: calc(var(--s-font-size-active) * 2);
+}

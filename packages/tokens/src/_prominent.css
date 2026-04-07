@@ -1,0 +1,18 @@
+/* scilence — STEAMCO Design System Foundation
+   https://github.com/ACME-STEAMCO/scilence
+   Canonical source of truth for all STEAMCO products. */
+
+/* ===== 9. PROMINENT & ON-COLOR TOKENS ===== */
+:root {
+	/* Prominent action color — vibrant brand for hero CTA buttons */
+	--s-color-prominent-bg: oklch(0.42 0.12 var(--brand-hue));
+	--s-color-prominent-bg-hover: oklch(0.48 0.13 var(--brand-hue));
+	--s-color-prominent-fg: #fff;
+
+	/* On-accent foreground colors */
+	--s-color-on-accent: oklch(from var(--s-color-prominent-bg) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+	--s-color-on-success: oklch(from var(--s-color-status-success) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+	--s-color-on-warning: oklch(from var(--s-color-status-warning) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+	--s-color-on-error: oklch(from var(--s-color-status-danger) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+	--s-color-on-info: oklch(from var(--s-color-status-info) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+}

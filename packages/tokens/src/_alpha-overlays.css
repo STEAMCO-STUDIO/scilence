@@ -1,0 +1,16 @@
+/* scilence — STEAMCO Design System Foundation
+   https://github.com/ACME-STEAMCO/scilence
+   Canonical source of truth for all STEAMCO products. */
+
+/* ===== 10. ALPHA OVERLAYS ===== */
+:root {
+	/* Lift (white at alpha) — always lighter than parent */
+	--s-alpha-lift-lighter: oklch(1 0 0 / 0.08);
+	--s-alpha-lift-light: oklch(1 0 0 / 0.16);
+	--s-alpha-lift-bright: oklch(1 0 0 / 0.28);
+
+	/* Dark (black at alpha) — always darker than parent */
+	--s-alpha-dark: oklch(0 0 0 / 0.06);
+	--s-alpha-darker: oklch(0 0 0 / 0.12);
+	--s-alpha-midnight: oklch(0 0 0 / 0.2);
+}

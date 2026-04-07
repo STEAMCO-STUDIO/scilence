@@ -1,0 +1,14 @@
+/* scilence — STEAMCO Design System Foundation
+   https://github.com/ACME-STEAMCO/scilence
+   Canonical source of truth for all STEAMCO products. */
+
+@import './_palettes.css';
+@import './_spacing.css';
+@import './_typography.css';
+@import './_radius-borders.css';
+@import './_z-index.css';
+@import './_shadows.css';
+@import './_transitions.css';
+@import './_status-colors.css';
+@import './_prominent.css';
+@import './_alpha-overlays.css';

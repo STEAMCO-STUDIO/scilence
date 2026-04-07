@@ -1,0 +1,21 @@
+/* scilence — STEAMCO Design System Foundation
+   https://github.com/ACME-STEAMCO/scilence
+   Canonical source of truth for all STEAMCO products. */
+
+/* ===== 4. RADIUS & BORDERS ===== */
+:root {
+	/* Proportional radius system */
+	--s-radius-base: calc(var(--s-font-size-active) * 0.267);
+	--s-radius-0: calc(var(--s-radius-base) * 0.5);
+	--s-radius-1: calc(var(--s-radius-base) * 1);
+	--s-radius-2: calc(var(--s-radius-base) * 1.5);
+	--s-radius-3: calc(var(--s-radius-base) * 2.5);
+	--s-radius-4: calc(var(--s-radius-base) * 3.5);
+	--s-radius-round: 9999px;
+	--s-radius-window: 12px;
+
+	/* Border widths */
+	--s-border-thin: calc(var(--s-font-size-active) * 0.071);
+	--s-border-base: calc(var(--s-font-size-active) * 0.143);
+	--s-border-thick: calc(var(--s-font-size-active) * 0.214);
+}

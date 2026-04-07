@@ -1,0 +1,34 @@
+/* scilence — STEAMCO Design System Foundation
+   https://github.com/ACME-STEAMCO/scilence
+   Canonical source of truth for all STEAMCO products. */
+
+/* ===== 7. TRANSITIONS ===== */
+:root {
+	/* Duration tokens */
+	--s-duration-instant: 0ms;
+	--s-duration-fast: 100ms;
+	--s-duration-normal: 200ms;
+	--s-duration-slow: 300ms;
+	--s-duration-slower: 500ms;
+	--s-duration-slowest: 800ms;
+
+	/* Easing functions */
+	--s-ease-linear: linear;
+	--s-ease-in: cubic-bezier(0.4, 0, 1, 1);
+	--s-ease-out: cubic-bezier(0, 0, 0.2, 1);
+	--s-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+	--s-ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+
+	/* Transition shorthand combinations */
+	--s-transition-colors: color var(--s-duration-fast) var(--s-ease-out), background-color var(--s-duration-fast) var(--s-ease-out), border-color var(--s-duration-fast) var(--s-ease-out);
+	--s-transition-opacity: opacity var(--s-duration-normal) var(--s-ease-out);
+	--s-transition-transform: transform var(--s-duration-normal) var(--s-ease-out);
+	--s-transition-shadow: box-shadow var(--s-duration-fast) var(--s-ease-out);
+	--s-transition-all: all var(--s-duration-normal) var(--s-ease-out);
+
+	/* Component-specific transitions */
+	--s-transition-modal-enter: var(--s-duration-normal) var(--s-ease-out);
+	--s-transition-modal-exit: var(--s-duration-fast) var(--s-ease-in);
+	--s-transition-dropdown: var(--s-duration-fast) var(--s-ease-out);
+	--s-transition-tooltip: var(--s-duration-fast) var(--s-ease-out);
+}

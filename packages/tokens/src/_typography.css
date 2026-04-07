@@ -1,0 +1,62 @@
+/* scilence — STEAMCO Design System Foundation
+   https://github.com/ACME-STEAMCO/scilence
+   Canonical source of truth for all STEAMCO products. */
+
+/* ===== 3. TYPOGRAPHY ===== */
+:root {
+	/* Font families — canonical three: Figtree (sans), IBM Plex Serif (serif), Inconsolata (mono) */
+	--s-font-sans: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+	--s-font-serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+	--s-font-mono: "Inconsolata", "SF Mono", "Cascadia Code", ui-monospace, monospace;
+
+	/* Base font size — user-tunable */
+	--s-font-size-base: 14px;
+	--s-font-size-ratio: 1.15;
+
+	/* Density variants */
+	--s-font-size-condensed: calc(var(--s-font-size-base) / var(--s-font-size-ratio));
+	--s-font-size-standard: var(--s-font-size-base);
+	--s-font-size-expanded: calc(var(--s-font-size-base) * var(--s-font-size-ratio));
+
+	/* Modular scale for headings */
+	--s-font-size-0: calc(var(--s-font-size-base) / var(--s-font-size-ratio));
+	--s-font-size-1: var(--s-font-size-base);
+	--s-font-size-2: calc(var(--s-font-size-base) * var(--s-font-size-ratio));
+	--s-font-size-3: calc(var(--s-font-size-2) * var(--s-font-size-ratio));
+	--s-font-size-4: calc(var(--s-font-size-3) * var(--s-font-size-ratio));
+
+	/* Active font size */
+	--s-font-size-active: var(--s-font-size-standard);
+	--s-font-size-min: 10px;
+
+	/* Font weights */
+	--s-font-weight-regular: 400;
+	--s-font-weight-medium: 500;
+	--s-font-weight-semibold: 600;
+	--s-font-weight-bold: 700;
+
+	/* Line heights */
+	--s-font-line-height-tight: 1.25;
+	--s-font-line-height-normal: 1.4;
+	--s-font-line-height-relaxed: 1.6;
+}
+
+/* ===== 3b. DENSITY MODES ===== */
+/* Density modes scale spacing and font size proportionally.
+   --s-space-density multiplies all Fibonacci spacing tokens.
+   --s-font-size-active selects the density-appropriate font size.
+   Radius and border tokens derive from --s-font-size-active, so they
+   cascade automatically when density changes. */
+:root[data-density='condensed'] {
+	--s-space-density: calc(1 / var(--s-font-size-ratio));
+	--s-font-size-active: var(--s-font-size-condensed);
+}
+:root[data-density='standard'],
+:root:not([data-density]) {
+	--s-space-density: 1;
+	--s-font-size-active: var(--s-font-size-standard);
+}
+:root[data-density='expanded'] {
+	--s-space-density: var(--s-font-size-ratio);
+	--s-font-size-active: var(--s-font-size-expanded);
+}

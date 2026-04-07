@@ -1,0 +1,153 @@
+/* scilence — STEAMCO Design System Foundation
+   https://github.com/ACME-STEAMCO/scilence
+   Canonical source of truth for all STEAMCO products. */
+
+/* ===== 1. PALETTES ===== */
+:root {
+	/* Brand hues — primary drives brandscale, secondary drives the complement scale.
+	   White-label: override both hues to shift the entire palette. */
+	--brand-hue: 180;
+	--brand-hue-secondary: 249;
+	--scale-hue: 180;
+
+	/* Cream palette (legacy, for reference) */
+	--cream-white: #fefdfd;
+	--cream-paper: #fbfbf9;
+	--cream-canvas: #f0eee6;
+	--cream-linen: #e8e6dc;
+	--cream-sand: #e0ddd2;
+	--cream-bone: #d2cfc3;
+
+	/* ===== TEALSCALE (Primary UI scale, hue 180) =====
+	   Chroma peaks mid-range (0.12) and tapers at extremes, matching
+	   the morph sequencer's chromatic scale curve. Replaces the old
+	   desaturated greenscale. This is the primary scale for UI chrome. */
+	--s-teal-25:  oklch(0.97 0.03  180);
+	--s-teal-50:  oklch(0.95 0.04  180);
+	--s-teal-75:  oklch(0.93 0.05  180);
+	--s-teal-100: oklch(0.91 0.06  180);
+	--s-teal-150: oklch(0.88 0.07  180);
+	--s-teal-200: oklch(0.84 0.08  180);
+	--s-teal-300: oklch(0.76 0.10  180);
+	--s-teal-400: oklch(0.68 0.11  180);
+	--s-teal-500: oklch(0.60 0.12  180);
+	--s-teal-600: oklch(0.52 0.11  180);
+	--s-teal-700: oklch(0.44 0.10  180);
+	--s-teal-800: oklch(0.36 0.08  180);
+	--s-teal-850: oklch(0.30 0.06  180);
+	--s-teal-900: oklch(0.24 0.05  180);
+	--s-teal-925: oklch(0.19 0.04  180);
+	--s-teal-950: oklch(0.14 0.03  180);
+	--s-teal-975: oklch(0.10 0.02  180);
+
+	/* Tealscale alpha variants */
+	--s-teal-alpha-5:  oklch(0.60 0.12 180 / 0.05);
+	--s-teal-alpha-10: oklch(0.60 0.12 180 / 0.10);
+	--s-teal-alpha-20: oklch(0.60 0.12 180 / 0.20);
+	--s-teal-alpha-30: oklch(0.52 0.11 180 / 0.30);
+	--s-teal-alpha-50: oklch(0.44 0.10 180 / 0.50);
+
+	/* ===== GREENSCALE (hue 155, for accents/differentiation) =====
+	   A warmer green than tealscale. Same chroma curve. */
+	--s-green-25:  oklch(0.97 0.03  155);
+	--s-green-50:  oklch(0.95 0.04  155);
+	--s-green-75:  oklch(0.93 0.05  155);
+	--s-green-100: oklch(0.91 0.06  155);
+	--s-green-150: oklch(0.88 0.07  155);
+	--s-green-200: oklch(0.84 0.08  155);
+	--s-green-300: oklch(0.76 0.10  155);
+	--s-green-400: oklch(0.68 0.11  155);
+	--s-green-500: oklch(0.60 0.12  155);
+	--s-green-600: oklch(0.52 0.11  155);
+	--s-green-700: oklch(0.44 0.10  155);
+	--s-green-800: oklch(0.36 0.08  155);
+	--s-green-850: oklch(0.30 0.06  155);
+	--s-green-900: oklch(0.24 0.05  155);
+	--s-green-925: oklch(0.19 0.04  155);
+	--s-green-950: oklch(0.14 0.03  155);
+	--s-green-975: oklch(0.10 0.02  155);
+
+	/* Greenscale alpha variants */
+	--s-green-alpha-5:  oklch(0.60 0.12 155 / 0.05);
+	--s-green-alpha-10: oklch(0.60 0.12 155 / 0.10);
+	--s-green-alpha-20: oklch(0.60 0.12 155 / 0.20);
+	--s-green-alpha-30: oklch(0.52 0.11 155 / 0.30);
+	--s-green-alpha-50: oklch(0.44 0.10 155 / 0.50);
+
+	/* ===== CREAMSCALE (sRGB hex, warm neutrals) =====
+	   Uses hex values to avoid the OKLCH green cast at high lightness.
+	   Sourced from the morph sequencer's battle-tested palette. */
+	--s-cream-25:  #fefdfd;  /* white */
+	--s-cream-50:  #fbfbf9;  /* paper */
+	--s-cream-75:  #f6f5f0;  /* pearl */
+	--s-cream-100: #f0eee6;  /* cream */
+	--s-cream-150: #e8e6dc;  /* linen */
+	--s-cream-200: #e0ddd2;  /* sand */
+	--s-cream-300: #d2cfc3;  /* bone */
+	--s-cream-400: #c4bfb0;  /* stone */
+	--s-cream-500: #b8b3a4;  /* clay */
+	--s-cream-600: #a09a8a;  /* drift */
+	--s-cream-700: #8a8474;  /* walnut */
+	--s-cream-800: #736d5e;  /* timber */
+	--s-cream-850: #5c5749;  /* bark */
+	--s-cream-900: #454136;  /* earth */
+	--s-cream-925: #2e2b24;  /* ink */
+	--s-cream-950: #1a1815;  /* char */
+	--s-cream-975: #000000;  /* black */
+
+	/* Creamscale alpha variants (using oklch for alpha channel) */
+	--s-cream-alpha-5:  oklch(0.97 0.01 80 / 0.05);
+	--s-cream-alpha-10: oklch(0.97 0.01 80 / 0.10);
+	--s-cream-alpha-20: oklch(0.93 0.01 80 / 0.20);
+	--s-cream-alpha-40: oklch(0.90 0.01 80 / 0.40);
+
+	/* ===== BRANDSCALE (Dynamic, follows --brand-hue) =====
+	   Same chroma curve as tealscale but keyed to --brand-hue. */
+	--s-brand-25:  oklch(0.97 0.03  var(--brand-hue));
+	--s-brand-50:  oklch(0.95 0.04  var(--brand-hue));
+	--s-brand-75:  oklch(0.93 0.05  var(--brand-hue));
+	--s-brand-100: oklch(0.91 0.06  var(--brand-hue));
+	--s-brand-150: oklch(0.88 0.07  var(--brand-hue));
+	--s-brand-200: oklch(0.84 0.08  var(--brand-hue));
+	--s-brand-300: oklch(0.76 0.10  var(--brand-hue));
+	--s-brand-400: oklch(0.68 0.11  var(--brand-hue));
+	--s-brand-500: oklch(0.60 0.12  var(--brand-hue));
+	--s-brand-600: oklch(0.52 0.11  var(--brand-hue));
+	--s-brand-700: oklch(0.44 0.10  var(--brand-hue));
+	--s-brand-800: oklch(0.36 0.08  var(--brand-hue));
+	--s-brand-850: oklch(0.30 0.06  var(--brand-hue));
+	--s-brand-900: oklch(0.24 0.05  var(--brand-hue));
+	--s-brand-925: oklch(0.19 0.04  var(--brand-hue));
+	--s-brand-950: oklch(0.14 0.03  var(--brand-hue));
+	--s-brand-975: oklch(0.10 0.02  var(--brand-hue));
+
+	/* Brandscale alpha variants */
+	--s-brand-alpha-5:  oklch(0.60 0.12 var(--brand-hue) / 0.05);
+	--s-brand-alpha-10: oklch(0.60 0.12 var(--brand-hue) / 0.10);
+	--s-brand-alpha-20: oklch(0.52 0.11 var(--brand-hue) / 0.20);
+	--s-brand-alpha-30: oklch(0.44 0.10 var(--brand-hue) / 0.30);
+	--s-brand-alpha-50: oklch(0.36 0.08 var(--brand-hue) / 0.50);
+
+	/* ===== BRANDSCALE SECONDARY (follows --brand-hue-secondary) =====
+	   Complement scale for secondary categorization, info states, and
+	   visual distinction from the primary accent. Same L/C curve as
+	   brandscale, keyed to the secondary hue. White-label: set
+	   --brand-hue-secondary to shift the entire complement palette. */
+	--s-brand-sec-100: oklch(0.91 0.04  var(--brand-hue-secondary));
+	--s-brand-sec-200: oklch(0.84 0.05  var(--brand-hue-secondary));
+	--s-brand-sec-300: oklch(0.76 0.06  var(--brand-hue-secondary));
+	--s-brand-sec-400: oklch(0.68 0.06  var(--brand-hue-secondary));
+	--s-brand-sec-500: oklch(0.62 0.06  var(--brand-hue-secondary));
+	--s-brand-sec-600: oklch(0.51 0.06  var(--brand-hue-secondary));
+	--s-brand-sec-700: oklch(0.44 0.05  var(--brand-hue-secondary));
+	--s-brand-sec-800: oklch(0.36 0.04  var(--brand-hue-secondary));
+
+	/* ===== ACCENT COLORS (Vibrant, for CTAs and highlights) ===== */
+	--brand-accent-light: oklch(0.75 0.12 var(--brand-hue));
+	--brand-accent: oklch(0.61 0.15 var(--brand-hue));
+	--brand-accent-dark: oklch(0.45 0.12 var(--brand-hue));
+	--brand-accent-vivid: oklch(0.65 0.2 var(--brand-hue));
+
+	--accent-brand-light: oklch(0.359 0.0477 var(--brand-hue));
+	--accent-brand-dark: oklch(0.2859 0.0416 var(--brand-hue));
+}
