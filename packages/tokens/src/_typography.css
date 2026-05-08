@@ -29,6 +29,22 @@
 	--s-font-size-active: var(--s-font-size-standard);
 	--s-font-size-min: 10px;
 
+	/* Density font-size tier — Lock 2 of 2026-05-07 STEAMCO DS doctrine.
+	 * Sub-12px tier for dense-data contexts (chip strips, kbd metadata, dense table rows).
+	 * Mirrors the --s-space-tight-{1,2,3} sub-Fibonacci precedent for spacing.
+	 * ds-audit V5 accepts these alongside the standard ramp; raw px/rem/em font-sizes
+	 * remain violations.
+	 *
+	 * - density-1 (11px): dense-row body, badge metadata, secondary chip text
+	 * - density-2 (10px): chip strips, kbd labels, orient-step-chip glyphs
+	 * - density-3 (9px):  footnote rows, micro-tag glyphs, lowest legible size
+	 *
+	 * Ratified visceral 2026-05-08 by Caitlin at the GUIDE admin patterns surface.
+	 */
+	--s-font-size-density-1: 11px;
+	--s-font-size-density-2: 10px;
+	--s-font-size-density-3: 9px;
+
 	/* Font weights */
 	--s-font-weight-regular: 400;
 	--s-font-weight-medium: 500;

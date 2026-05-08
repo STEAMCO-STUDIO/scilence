@@ -14,6 +14,21 @@
 	--s-shadow-subtle: var(--s-shadow-sm);
 	--s-shadow-float: var(--s-shadow-lg);
 
+	/* Semantic shadow tier — Lock 1 of 2026-05-07 STEAMCO DS doctrine.
+	 * Use these names at consumption sites (calm-UI: shadows are governed by semantic
+	 * intent, not mechanical scale). ds-audit V10 accepts var(--s-shadow-*) and flags
+	 * literal rgba/oklch shadow values. Existing consumers using --s-shadow-{sm,md,lg,xl}
+	 * remain compliant (mechanical names are kept as the underlying ramp).
+	 *
+	 * - subtle: card hover, hint surfaces, faint affordances (≡ sm)
+	 * - base:   panels, dropdowns, popovers (≡ md)
+	 * - raised: modals, drawers, prominent overlays (≡ lg)
+	 *
+	 * Ratified visceral 2026-05-08 by Caitlin at the GUIDE admin patterns surface.
+	 */
+	--s-shadow-base: var(--s-shadow-md);
+	--s-shadow-raised: var(--s-shadow-lg);
+
 	/* Icon sizes */
 	--s-icon-xs: calc(var(--s-font-size-active) * 0.75);
 	--s-icon-sm: calc(var(--s-font-size-active) * 1);
