@@ -92,6 +92,7 @@
 	--s-color-fg-code: var(--accent-brand-dark);
 	--s-color-fg-label: var(--s-brand-600);
 	--s-color-bg-card: var(--s-cream-25);            /* pass 7: cards near-white per Caitlin direct */
+	--s-color-bg-footer: var(--s-cream-15);          /* pass 8: warm near-white footer per Caitlin direct */
 	--s-color-bg-card-hover: var(--s-cream-50);     /* pass 7: hover between card+canvas */
 	--s-color-bg-table-header: var(--s-cream-75);
 	--s-color-bg-table-row-hover: var(--s-cream-35);
