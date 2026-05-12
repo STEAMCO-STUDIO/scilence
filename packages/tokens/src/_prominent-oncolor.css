@@ -1,0 +1,35 @@
+/* scilence — STEAMCO Design System Foundation
+   Canonical pan-app tokens (@scilence/tokens). */
+
+/* ===== 9. PROMINENT & ON-COLOR TOKENS ===== */
+:root {
+	/* Prominent action color — vibrant brand for hero CTA buttons */
+	--s-color-prominent-bg: oklch(0.42 0.12 var(--brand-hue));
+	--s-color-prominent-bg-hover: oklch(0.48 0.13 var(--brand-hue));
+	--s-color-prominent-fg: #fff;
+
+	/* On-accent foreground colors */
+	--s-color-on-accent: oklch(from var(--s-color-prominent-bg) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+	--s-color-on-success: oklch(from var(--s-color-status-success) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+	--s-color-on-warning: oklch(from var(--s-color-status-warning) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+	--s-color-on-error: oklch(from var(--s-color-status-danger) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+	--s-color-on-info: oklch(from var(--s-color-status-info) clamp(0.15, calc(2.9 - 5 * l), 0.97) 0.01 h);
+
+	/* Calm-UI substrate + focal-point hierarchy */
+	--substrate-cool-rest: color-mix(in oklch, var(--s-brand-900) 28%, var(--s-brand-800));
+	--substrate-cool-active: var(--s-brand-700);
+	--substrate-warm-rest: color-mix(in oklch, var(--s-cream-100) 70%, var(--s-cream-75));
+	--substrate-warm-active: var(--s-cream-50);
+	--flush-3d-dramatic-rest-chroma-multiplier: 0.3;
+	--flush-3d-dramatic-active-chroma-multiplier: 1;
+	--flush-3d-dramatic-duration: 200ms;
+	--flush-2d-subtle-rest-chroma-multiplier: 0.7;
+	--flush-2d-subtle-active-chroma-multiplier: 1;
+	--flush-2d-subtle-duration: 100ms;
+	--flush-list-minimal-step: 1;
+	--accent-luminous-warm: oklch(0.72 0.18 35);
+	--focal-point-warm: var(--accent-luminous-warm);
+	--accent-luminous-cool: oklch(0.72 0.09 230);
+	--focal-point-cool: var(--accent-luminous-cool);
+	--macro-ligand-color: var(--focal-point-warm);
+}

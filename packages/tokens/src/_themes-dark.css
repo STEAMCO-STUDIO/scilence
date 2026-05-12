@@ -1,0 +1,115 @@
+/* scilence — STEAMCO Design System Foundation
+   Canonical pan-app tokens (@scilence/tokens). */
+
+/* ===== 13. DARK THEME ===== */
+:root[data-theme='dark'] {
+	/* App background — flat brandscale, opaque */
+	--s-color-bg-app: var(--s-brand-975);
+	--s-color-bg-page: var(--s-brand-950);
+	--s-color-bg-panel: var(--s-brand-950);
+	--s-color-bg-subtle: var(--s-brand-925);
+	--s-color-bg-surface: var(--s-brand-950);
+	--s-color-bg-titlebar: var(--s-brand-alpha-30);
+
+	/* Borders */
+	--s-color-border-subtle: var(--s-brand-850);
+	--s-color-border-strong: var(--s-brand-700);
+
+	/* Text colors */
+	--s-color-fg-primary: var(--s-brand-50);
+	--s-color-fg-muted: var(--s-brand-100);
+	--s-color-fg-soft: var(--s-brand-150);
+
+	/* Surface elevation — gradient renders ~0.06–0.11, so e1 must clear 0.16+
+	   e0 (gradient avg ~0.09) → e1 0.16 (Δ0.07) → e2 0.21 (Δ0.05) */
+	--s-surface-elevation-0-bg: var(--s-color-bg-app);
+	--s-surface-elevation-1-bg: var(--s-brand-925);
+	--s-surface-elevation-2-bg: var(--s-brand-900);
+	--s-color-backdrop-scrim: var(--s-brand-alpha-50);
+
+	/* Material overrides for dark theme */
+	--mat-solid-bg: oklch(0.12 0.018 var(--brand-hue) / 0.3);
+
+	/* Prominent button — slightly brighter in dark mode */
+	--s-color-prominent-bg: oklch(0.5 0.13 var(--brand-hue));
+	--s-color-prominent-bg-hover: oklch(0.55 0.14 var(--brand-hue));
+
+	/* Accent colors for dark theme (inverted) */
+	--s-color-accent-quiet: var(--accent-brand-dark);
+	--s-color-accent-active: var(--accent-brand-light);
+	--s-color-accent-foreground: var(--s-brand-950);
+
+	/* Secondary accent — lighter in dark mode for legibility */
+	--s-color-accent-secondary: var(--s-brand-sec-500);
+	--s-color-accent-secondary-soft: var(--s-brand-sec-400);
+
+	/* Warm focal accent — studio "heat" / playback states (sweep-2 2026-05-12).
+	   Pairs with --accent-luminous-warm defined in _prominent-oncolor.css. */
+	--s-color-accent-warm: var(--accent-luminous-warm);
+	--s-color-accent-luminous-warm-subtle: color-mix(in oklch, var(--accent-luminous-warm) 18%, var(--s-color-bg-surface));
+	--s-color-accent-luminous-cool-subtle: color-mix(in oklch, var(--accent-luminous-cool) 18%, var(--s-color-bg-surface));
+
+	/* Strong/filled surfaces */
+	--s-color-bg-strong: var(--s-brand-850);
+	--s-color-fg-on-strong: var(--s-brand-50);
+
+	/* Hover states — one step above elevation-1 (brandscale-925) */
+	--s-color-hover-bg: var(--s-brand-850);
+	--s-color-hover-bg-strong: var(--s-brand-800);
+	--s-color-hover-fg: var(--s-brand-50);
+	--s-color-hover-border: var(--s-brand-700);
+	--s-color-hover-accent: oklch(0.42 0.05 var(--brand-hue));
+
+	/* Focus states */
+	--s-color-focus-ring: transparent;
+	--s-color-focus-bg: oklch(0.22 0.03 var(--brand-hue));
+	--s-color-focus-border: oklch(0.55 0.1 var(--brand-hue));
+	--s-color-focus-glow: transparent;
+
+	/* Active/Pressed states */
+	--s-color-active-bg: var(--s-brand-850);
+	--s-color-active-fg: var(--s-brand-50);
+	--s-color-active-border: var(--s-brand-700);
+
+	/* Selected states */
+	--s-color-selected-bg: oklch(0.25 0.04 var(--brand-hue));
+	--s-color-selected-fg: oklch(0.9 0.03 var(--brand-hue));
+	--s-color-selected-border: oklch(0.5 0.08 var(--brand-hue));
+
+	/* Disabled states */
+	--s-color-disabled-bg: var(--s-brand-925);
+	--s-color-disabled-fg: var(--s-brand-600);
+	--s-color-disabled-border: var(--s-brand-850);
+
+	/* Icon colors */
+	--s-color-fg-icon: var(--s-brand-100);
+	--s-color-fg-icon-muted: var(--s-brand-150);
+	--s-color-fg-icon-hover: var(--s-brand-50);
+
+	/* Override alpha variants for dark theme */
+	--s-brand-alpha-5: oklch(0.18 0.08 var(--brand-hue) / 0.15);
+	--s-brand-alpha-10: oklch(0.18 0.08 var(--brand-hue) / 0.2);
+	--s-brand-alpha-20: oklch(0.18 0.08 var(--brand-hue) / 0.25);
+	--s-brand-alpha-30: oklch(0.18 0.08 var(--brand-hue) / 0.3);
+	--s-brand-alpha-50: oklch(0.18 0.08 var(--brand-hue) / 0.4);
+
+	/* Dark theme shadows */
+	--s-shadow-sm: 0 1px 2px oklch(0.18 0.08 var(--brand-hue) / 0.2), 0 1px 3px oklch(0.18 0.08 var(--brand-hue) / 0.12);
+	--s-shadow-md: 0 2px 4px oklch(0.18 0.08 var(--brand-hue) / 0.24), 0 4px 8px oklch(0.18 0.08 var(--brand-hue) / 0.16);
+	--s-shadow-lg: 0 8px 16px oklch(0.18 0.08 var(--brand-hue) / 0.3), 0 4px 8px oklch(0.18 0.08 var(--brand-hue) / 0.2);
+	--s-shadow-xl: 0 12px 24px oklch(0.18 0.08 var(--brand-hue) / 0.36), 0 6px 12px oklch(0.18 0.08 var(--brand-hue) / 0.24);
+
+	/* Additional semantic tokens for dark theme — track elevation levels */
+	--s-color-fg-heading: var(--s-brand-50);
+	--s-color-fg-code: var(--accent-brand-light);
+	--s-color-fg-label: var(--s-brand-150);
+	--s-color-bg-card: var(--s-brand-925);
+	--s-color-bg-card-hover: var(--s-brand-900);
+	--s-color-bg-table-header: var(--s-brand-850);
+	--s-color-bg-table-row-hover: var(--s-brand-925);
+
+	/* Navigation colors */
+	--s-color-nav-hover-bg: var(--s-brand-900);
+	--s-color-nav-active-bg: var(--s-color-bg-strong);
+	--s-color-nav-active-fg: var(--s-color-fg-on-strong);
+}

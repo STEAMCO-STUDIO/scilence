@@ -1,0 +1,43 @@
+/* scilence — STEAMCO Design System Foundation
+   Canonical pan-app tokens (@scilence/tokens). */
+
+/* ===== 14c. Viewport bands + orientation (layout / responsive chrome) =====
+   NOT density: spacing & type use data-density (condensed | standard | expanded)
+   from AppearanceStore — legacy guide-tokens / styleground --s-density.
+
+   html attributes (admin-shell.js):
+   • data-viewport — primary layout band (tablet/desktop by width; phones use short-side, see below)
+   • data-orientation — portrait | landscape (matchMedia "(orientation: portrait)")
+   • data-mobile-bucket — s | m | lg only when the shortest viewport edge is in a mobile
+     range (so phone landscape still pairs with mobile-* + orientation); otherwise unset.
+
+   Combine for mobile layouts, e.g.:
+     html[data-mobile-bucket="lg"][data-orientation="landscape"]
+   Or in CSS without JS:
+     @media (max-width: 767px) and (orientation: portrait) { ... }
+
+   Shell: overlay slide-over nav when width ≤ 1023px; at 1024px+ the sidebar is
+   in-flow (ribbon or edge-overlay per AppearanceStore). (Viewport bands above remain
+   for data-viewport / density — shell drawer split is 1024 in admin-shell.css.)
+
+   Officially supported browsers for admin (revisit quarterly):
+   • Chromium / Chrome / Edge — current + previous major
+   • Safari — current + previous major (macOS + iOS)
+   • Firefox — current + previous major
+
+   Upper edge of each width band (px). Mobile bucket uses the same numeric edges on min(w,h)
+   when max(w,h) ≤ --s-vp-handheld-max (phone-class; avoids classifying a tall desktop window as mobile). */
+:root {
+	--s-vp-mobile-s-max: 389px;
+	--s-vp-mobile-m-max: 559px;
+	--s-vp-mobile-lg-max: 767px;
+	--s-vp-tablet-s-max: 879px;
+	--s-vp-tablet-m-max: 991px;
+	--s-vp-tablet-lg-max: 1024px;
+	--s-vp-desktop-s-max: 1279px;
+	--s-vp-desktop-m-max: 1439px;
+	--s-vp-desktop-lg-max: 1919px;
+	/* > desktop-lg-max → desktop-xl */
+	/* Longest edge ≤ this → allow short-side mobile bucket (phones; large phones ~932) */
+	--s-vp-handheld-max: 932px;
+}

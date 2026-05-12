@@ -1,0 +1,100 @@
+/* scilence — STEAMCO Design System Foundation
+   Canonical pan-app tokens (@scilence/tokens). */
+
+/* ===== 12. LIGHT THEME (default) ===== */
+:root,
+:root[data-theme='light'] {
+	/* Calm-UI light substrate — tightened adjacency with explicit page layer.
+	   Keep >=4% relative luminance separation between app/page/panel/subtle. */
+	--s-color-bg-app: var(--s-cream-150);
+	--s-color-bg-page: var(--s-cream-100);
+	--s-color-bg-panel: var(--s-cream-75);
+	--s-color-bg-subtle: var(--s-cream-50);
+	--s-color-bg-surface: var(--s-cream-25);
+	--s-color-bg-titlebar: var(--s-cream-alpha-10);
+
+	/* Borders */
+	--s-color-border-subtle: var(--s-cream-150);
+	--s-color-border-strong: var(--s-cream-200);
+
+	/* Text colors */
+	--s-color-fg-primary: var(--s-brand-950);
+	--s-color-fg-muted: var(--s-brand-700);
+	--s-color-fg-soft: var(--s-brand-600);
+
+	/* Surface elevation — cream ground vs cream-tinted raised surfaces.
+	   Elevation-1 uses creamscale-25 (nearly white with hint of warmth). */
+	--s-surface-elevation-0-bg: var(--s-color-bg-app);
+	--s-surface-elevation-1-bg: var(--s-cream-25);
+	--s-surface-elevation-2-bg: var(--s-cream-75);
+	--s-color-backdrop-scrim: var(--s-brand-alpha-20);
+
+	/* Material overrides for light theme */
+	--mat-solid-bg: oklch(from var(--s-brand-50) l c h / 0.1);
+
+	/* Accent colors for light theme */
+	--s-color-accent-quiet: var(--accent-brand-light);
+	--s-color-accent-active: var(--accent-brand-dark);
+	--s-color-accent-foreground: var(--s-brand-25);
+
+	/* Secondary accent — complement hue for categorization and info states */
+	--s-color-accent-secondary: var(--s-brand-sec-600);
+	--s-color-accent-secondary-soft: var(--s-brand-sec-500);
+
+	/* Warm focal accent — studio "heat" / playback states (sweep-2 2026-05-12).
+	   Pairs with --accent-luminous-warm defined in _prominent-oncolor.css. */
+	--s-color-accent-warm: var(--accent-luminous-warm);
+	--s-color-accent-luminous-warm-subtle: color-mix(in oklch, var(--accent-luminous-warm) 14%, var(--s-color-bg-surface));
+	--s-color-accent-luminous-cool-subtle: color-mix(in oklch, var(--accent-luminous-cool) 14%, var(--s-color-bg-surface));
+
+	/* Strong/filled surfaces */
+	--s-color-bg-strong: var(--s-color-accent-active);
+	--s-color-fg-on-strong: var(--s-brand-25);
+
+	/* Hover states */
+	--s-color-hover-bg: var(--s-cream-75);
+	--s-color-hover-bg-strong: var(--s-cream-100);
+	--s-color-hover-fg: var(--s-brand-900);
+	--s-color-hover-border: var(--s-cream-200);
+	--s-color-hover-accent: oklch(0.32 0.045 var(--brand-hue));
+
+	/* Focus states */
+	--s-color-focus-ring: transparent;
+	--s-color-focus-bg: oklch(0.95 0.02 var(--brand-hue));
+	--s-color-focus-border: oklch(0.45 0.12 var(--brand-hue));
+	--s-color-focus-glow: transparent;
+
+	/* Active/Pressed states */
+	--s-color-active-bg: var(--s-cream-100);
+	--s-color-active-fg: var(--s-brand-950);
+	--s-color-active-border: var(--s-cream-200);
+
+	/* Selected states */
+	--s-color-selected-bg: oklch(0.92 0.03 var(--brand-hue));
+	--s-color-selected-fg: oklch(0.25 0.04 var(--brand-hue));
+	--s-color-selected-border: oklch(0.45 0.1 var(--brand-hue));
+
+	/* Disabled states */
+	--s-color-disabled-bg: var(--s-cream-75);
+	--s-color-disabled-fg: var(--s-brand-400);
+	--s-color-disabled-border: var(--s-cream-100);
+
+	/* Icon colors */
+	--s-color-fg-icon: var(--s-brand-700);
+	--s-color-fg-icon-muted: var(--s-brand-500);
+	--s-color-fg-icon-hover: var(--s-brand-900);
+
+	/* Additional semantic tokens */
+	--s-color-fg-heading: var(--s-brand-900);
+	--s-color-fg-code: var(--accent-brand-dark);
+	--s-color-fg-label: var(--s-brand-600);
+	--s-color-bg-card: var(--s-cream-50);
+	--s-color-bg-card-hover: var(--s-cream-75);
+	--s-color-bg-table-header: var(--s-cream-100);
+	--s-color-bg-table-row-hover: var(--s-cream-50);
+
+	/* Navigation colors */
+	--s-color-nav-hover-bg: var(--s-cream-100);
+	--s-color-nav-active-bg: var(--s-color-bg-strong);
+	--s-color-nav-active-fg: var(--s-color-fg-on-strong);
+}

@@ -1,21 +1,29 @@
 /* scilence — STEAMCO Design System Foundation
-   https://github.com/ACME-STEAMCO/scilence
-   Canonical source of truth for all STEAMCO products. */
+   Canonical pan-app tokens (@scilence/tokens). */
 
 /* ===== 2. SPACING (Fibonacci) ===== */
 :root {
 	/* Density scale — allows responsive compression */
 	--s-space-density: 1;
+	/* User tuning (AppearanceStore) — multiplies Fibonacci spacing after density */
+	--s-padding-scale: 1;
 
 	/* Base Fibonacci scale — calibrated to 14px font */
 	--s-space-0: 0px;
-	--s-space-1: calc(var(--s-space-density) * 3px);
-	--s-space-2: calc(var(--s-space-density) * 5px);
-	--s-space-3: calc(var(--s-space-density) * 8px);
-	--s-space-4: calc(var(--s-space-density) * 13px);
-	--s-space-5: calc(var(--s-space-density) * 21px);
-	--s-space-6: calc(var(--s-space-density) * 34px);
-	--s-space-7: calc(var(--s-space-density) * 55px);
+	--s-space-1: calc(var(--s-space-density) * var(--s-padding-scale, 1) * 3px);
+	--s-space-2: calc(var(--s-space-density) * var(--s-padding-scale, 1) * 5px);
+	--s-space-3: calc(var(--s-space-density) * var(--s-padding-scale, 1) * 8px);
+	--s-space-4: calc(var(--s-space-density) * var(--s-padding-scale, 1) * 13px);
+	--s-space-5: calc(var(--s-space-density) * var(--s-padding-scale, 1) * 21px);
+	--s-space-6: calc(var(--s-space-density) * var(--s-padding-scale, 1) * 34px);
+	--s-space-7: calc(var(--s-space-density) * var(--s-padding-scale, 1) * 55px);
+
+	/* Tight scale — dense-data exception only.
+	   Use only in tabular, sequence, or instrument-dense contexts where
+	   Fibonacci floor (--s-space-1: 3px) is too loose. */
+	--s-space-tight-1: 1px;
+	--s-space-tight-2: 2px;
+	--s-space-tight-3: 4px;
 
 	/* Semantic spacing tokens */
 	--s-layout-gutter: var(--s-space-6);
@@ -34,4 +42,27 @@
 	--s-layout-depth-pad: var(--s-space-6);
 	--s-layout-depth-gap: var(--s-space-5);
 	--s-layout-depth-item-gap: var(--s-space-4);
+
+	/* Studio / gallery shared tokens (moved from studio.css local fork). */
+	--sg-editor-sidebar-width: 380px;
+	--sg-things-sidebar-width: 280px;
+	--sg-gallery-card-min: 280px;
+	--sg-button-sm-size: 28px;
+	--sg-backdrop: oklch(0 0 0 / 0.6);
+	--sg-backdrop-dark: oklch(0.08 0.02 180 / 0.85);
+	--sg-grid-columns: repeat(auto-fill, minmax(var(--sg-gallery-card-min), 1fr));
+	--sg-card-aspect: 4 / 3;
+	--sg-card-action-bg: oklch(0.30 0.02 180 / 0.85);
+	--sg-card-action-hover-bg: oklch(0.22 0.03 180 / 0.95);
+	--sg-card-action-bg-dark: oklch(0.14 0.03 180 / 0.9);
+	--sg-card-action-hover-bg-dark: oklch(0.20 0.03 180 / 0.95);
+	--sg-backend-border: oklch(1 0 0 / 0.2);
+	--sg-backend-bg: oklch(0 0 0 / 0.5);
+	--sg-backend-fg: oklch(1 0 0 / 0.7);
+	--sg-backend-hover-bg: oklch(1 0 0 / 0.15);
+	--sg-backend-active-bg: oklch(1 0 0 / 0.9);
+	--sg-backend-active-fg: oklch(0 0 0 / 0.85);
+	--sg-backend-active-border: oklch(1 0 0 / 0.9);
+	--sg-save-dirty-dark-hover: oklch(0.22 0.02 160);
+	--sg-about-sidebar-width: 320px;
 }

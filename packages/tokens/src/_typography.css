@@ -1,6 +1,5 @@
 /* scilence — STEAMCO Design System Foundation
-   https://github.com/ACME-STEAMCO/scilence
-   Canonical source of truth for all STEAMCO products. */
+   Canonical pan-app tokens (@scilence/tokens). */
 
 /* ===== 3. TYPOGRAPHY ===== */
 :root {
@@ -28,18 +27,18 @@
 	/* Active font size */
 	--s-font-size-active: var(--s-font-size-standard);
 	--s-font-size-min: 10px;
+	/* Aliases / dense labels — shell surfaces reference these names */
+	--s-font-size-xxs: var(--s-font-size-min);
+	--s-font-size-micro: 9px;
+	--s-font-size-caption: 11px;
+	/* Gallery card initials — fluid band tied to modular scale */
+	--s-font-size-card-initials: clamp(1.714rem, 6vw, 2.571rem);
 
-	/* Density font-size tier — Lock 2 of 2026-05-07 STEAMCO DS doctrine.
-	 * Sub-12px tier for dense-data contexts (chip strips, kbd metadata, dense table rows).
-	 * Mirrors the --s-space-tight-{1,2,3} sub-Fibonacci precedent for spacing.
-	 * ds-audit V5 accepts these alongside the standard ramp; raw px/rem/em font-sizes
-	 * remain violations.
-	 *
-	 * - density-1 (11px): dense-row body, badge metadata, secondary chip text
-	 * - density-2 (10px): chip strips, kbd labels, orient-step-chip glyphs
-	 * - density-3 (9px):  footnote rows, micro-tag glyphs, lowest legible size
-	 *
-	 * Ratified visceral 2026-05-08 by Caitlin at the GUIDE admin patterns surface.
+	/* Density font-size tier — MOVED to scilence/packages/tokens/src/_typography.css 2026-05-08
+	 * per feedback_scilence_is_foundation. Pan-app concept; lives in the foundation.
+	 * Re-aliased here for the duration of the admin-tokens.css fork — drops when admin-tokens.css
+	 * starts importing scilence directly (admin-tokens-de-fork brief). Until then, these are
+	 * literal copies of the canonical scilence values (11/10/9 px).
 	 */
 	--s-font-size-density-1: 11px;
 	--s-font-size-density-2: 10px;

@@ -1,6 +1,5 @@
 /* scilence — STEAMCO Design System Foundation
-   https://github.com/ACME-STEAMCO/scilence
-   Canonical source of truth for all STEAMCO products. */
+   Canonical pan-app tokens (@scilence/tokens). */
 
 /* ===== 1. PALETTES ===== */
 :root {
@@ -150,4 +149,16 @@
 
 	--accent-brand-light: oklch(0.359 0.0477 var(--brand-hue));
 	--accent-brand-dark: oklch(0.2859 0.0416 var(--brand-hue));
+
+	/* User accent — AppearanceStore sets --accent-hue and --brand-hue together */
+	--accent-base: var(--brand-accent);
+
+	/* Settings appearance — accent preview circle (hue from --swatch-hue on control) */
+	--s-appearance-accent-swatch-fill: oklch(
+		0.55 0.18 var(--swatch-hue, var(--brand-hue))
+	);
+
+	/* Hidden terminal-strip placeholder (workspace footer band) */
+	--s-color-terminal-strip-bg: oklch(0.18 0 0);
+	--s-color-terminal-strip-fg: oklch(0.92 0 0);
 }

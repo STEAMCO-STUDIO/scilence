@@ -1,0 +1,8 @@
+/* scilence — STEAMCO Design System Foundation
+   Canonical pan-app tokens (@scilence/tokens). */
+
+/* ===== 14e. Tier-A doctrine primitives (queues / briefing surfaces) ===== */
+:root {
+	--s-tier-a-edge-color: var(--s-color-status-warning);
+	--s-tier-a-edge-width: 3px;
+}

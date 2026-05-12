@@ -1,6 +1,5 @@
 /* scilence — STEAMCO Design System Foundation
-   https://github.com/ACME-STEAMCO/scilence
-   Canonical source of truth for all STEAMCO products. */
+   Canonical pan-app tokens (@scilence/tokens). */
 
 /* ===== 8. STATUS COLORS ===== */
 :root {
@@ -29,6 +28,12 @@
 	--s-color-warning: var(--s-color-status-warning);
 	--s-color-error: var(--s-color-status-danger);
 	--s-color-info: var(--s-color-status-info);
+	/* Compatibility aliases used across shell CSS while we complete cleanup waves. */
+	--s-color-border: var(--s-color-border-subtle);
+	--s-color-bg-hover: var(--s-color-hover-bg);
+	--s-color-fg-secondary: var(--s-color-fg-muted);
+	--s-color-surface-subtle: var(--s-color-bg-subtle);
+	--s-line-height-snug: var(--s-font-line-height-tight);
 
 	/* Success variations */
 	--s-color-success-bg: oklch(0.95 0.02 156);

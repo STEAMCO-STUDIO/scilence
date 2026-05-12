@@ -1,0 +1,25 @@
+/* scilence — STEAMCO Design System Foundation
+   Canonical pan-app tokens (@scilence/tokens). */
+
+/* ===== 11. NESTING DEPTH SYSTEM ===== */
+:root {
+	--s-layout-depth-surface: var(--s-surface-elevation-0-bg);
+}
+
+.depth-0 {
+	--s-layout-depth-pad: var(--s-space-6);
+	--s-layout-depth-gap: var(--s-space-5);
+	--s-layout-depth-item-gap: var(--s-space-4);
+}
+
+.depth-1 {
+	--s-layout-depth-pad: var(--s-space-5);
+	--s-layout-depth-gap: var(--s-space-4);
+	--s-layout-depth-item-gap: var(--s-space-3);
+}
+
+.depth-2 {
+	--s-layout-depth-pad: var(--s-space-4);
+	--s-layout-depth-gap: var(--s-space-3);
+	--s-layout-depth-item-gap: var(--s-space-2);
+}
