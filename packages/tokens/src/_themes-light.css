@@ -4,13 +4,14 @@
 /* ===== 12. LIGHT THEME (default) ===== */
 :root,
 :root[data-theme='light'] {
-	/* Calm-UI light substrate — lightening pass 2026-05-12 + sunken second-pass 2026-05-12.
+	/* Calm-UI light substrate — lightening pass 2026-05-12 + sunken second-pass 2026-05-12 + pass 4 2026-05-12.
+	   Pass 4: surface aliases shifted one tier warmer (raised→cream-50, canvas→cream-100, wells→cream-150).
 	   Adjacent tier L delta target ≤ 0.025; hierarchy app > page > panel > subtle > surface. */
 	--s-color-bg-app: var(--s-cream-100);
 	--s-color-bg-page: var(--s-cream-75);
 	--s-color-bg-panel: var(--s-cream-50);
-	--s-color-bg-subtle: var(--s-cream-35);
-	--s-color-bg-surface: var(--s-cream-25);
+	--s-color-bg-subtle: var(--s-cream-75);   /* was cream-35 — pass 4: one tier warmer */
+	--s-color-bg-surface: var(--s-cream-50);  /* was cream-25 — pass 4: one tier warmer */
 	--s-color-bg-titlebar: var(--s-cream-alpha-10);
 
 	/* Borders */
@@ -98,17 +99,19 @@
 	--s-color-nav-active-bg: var(--s-color-bg-strong);
 	--s-color-nav-active-fg: var(--s-color-fg-on-strong);
 
-	/* Surface elevation — semantic aliases: lightening pass 2026-05-12; sunken second-pass 2026-05-12.
+	/* Surface elevation — semantic aliases: pass 4 2026-05-12 — one tier warmer throughout.
+	   Root cause of pass-3 residual: cream-25 #fefdfd reads as near-pure white; Claude's UI
+	   reference uses warmer cream throughout. Shifted all aliases one tier deeper into palette
+	   (no new colors); cream-25/35 still available for non-aliased use.
 	   Hierarchy (lightest → darkest): raised > hover > default > sunken.
-	   --s-cream-25 (#fefdfd, L≈0.994) → raised (elevated card)
-	   --s-cream-35 (#fdfcfb, L≈0.990) → hover (surface hover lift, sits between raised/default)
-	   --s-cream-50 (#fbfbf9, L≈0.985) → default (base canvas)
-	   --s-cream-75 (#f9f9f6, L≈0.980) → sunken (inset/well; darkest tier; lifted from L≈0.970)
-	   Adjacent tier L deltas: raised→hover ~0.004, hover→default ~0.005, default→sunken ~0.005, raised→sunken ~0.014. */
-	--s-color-surface-raised: var(--s-cream-25);
-	--s-color-surface-hover: var(--s-cream-35);
-	--s-color-surface-default: var(--s-cream-50);
-	--s-color-surface-sunken: var(--s-cream-75);
+	   --s-cream-50  (#fbfbf9) → raised   (elevated card; was cream-25)
+	   --s-cream-75  (#fbfaf7) → hover    (surface hover lift; was cream-35)
+	   --s-cream-100 (#f0eee6) → default  (base canvas; was cream-50)
+	   --s-cream-150 (#e8e6dc) → sunken   (inset/well; was cream-75) */
+	--s-color-surface-raised: var(--s-cream-50);   /* was cream-25 — cards */
+	--s-color-surface-hover: var(--s-cream-75);    /* was cream-35 — hover */
+	--s-color-surface-default: var(--s-cream-100); /* was cream-50 — canvas */
+	--s-color-surface-sunken: var(--s-cream-150);  /* was cream-75 — wells */
 
 	/* Border semantic alias */
 	--s-color-border-default: var(--s-color-border-strong);
