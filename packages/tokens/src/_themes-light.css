@@ -97,4 +97,18 @@
 	--s-color-nav-hover-bg: var(--s-cream-100);
 	--s-color-nav-active-bg: var(--s-color-bg-strong);
 	--s-color-nav-active-fg: var(--s-color-fg-on-strong);
+
+	/* Surface elevation — semantic aliases mapping component vocabulary to bg hierarchy */
+	--s-color-surface-raised: var(--s-color-bg-surface);
+	--s-color-surface-default: var(--s-color-bg-surface);
+	--s-color-surface-hover: var(--s-color-hover-bg);
+	--s-color-surface-sunken: var(--s-color-bg-subtle);
+
+	/* Border semantic alias */
+	--s-color-border-default: var(--s-color-border-strong);
+
+	/* Accent tier — blue-teal (hue 200) scale for focal/interactive UI */
+	--s-color-accent-default: oklch(0.62 0.18 200);
+	--s-color-accent-muted: oklch(0.78 0.10 200);
+	--s-color-accent-subtle: oklch(0.96 0.04 200);
 }

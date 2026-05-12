@@ -13,6 +13,12 @@
 	--s-radius-round: 9999px;
 	--s-radius-window: 12px;
 
+	/* Semantic radius aliases — named tiers for component authoring */
+	--s-radius-sm: var(--s-radius-1);
+	--s-radius-md: var(--s-radius-2);
+	--s-radius-xl: var(--s-radius-window);
+	--s-radius-full: var(--s-radius-round);
+
 	/* Border widths */
 	--s-border-thin: calc(var(--s-font-size-active) * 0.071);
 	--s-border-base: calc(var(--s-font-size-active) * 0.143);

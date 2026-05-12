@@ -112,4 +112,8 @@
 	--s-color-nav-hover-bg: var(--s-brand-900);
 	--s-color-nav-active-bg: var(--s-color-bg-strong);
 	--s-color-nav-active-fg: var(--s-color-fg-on-strong);
+
+	/* Dark overrides for surface semantic aliases */
+	--s-color-surface-raised: oklch(0.20 0 0);
+	--s-color-border-default: oklch(0.30 0 0);
 }
