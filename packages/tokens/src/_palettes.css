@@ -77,6 +77,7 @@
 	   Uses hex values to avoid the OKLCH green cast at high lightness.
 	   Sourced from the morph sequencer's battle-tested palette. */
 	--s-cream-25:  #fefdfd;  /* white */
+	--s-cream-35:  #fdfcfb;  /* parchment — intermediate step added for lightening-pass surface tiers */
 	--s-cream-50:  #fbfbf9;  /* paper */
 	--s-cream-75:  #f6f5f0;  /* pearl */
 	--s-cream-100: #f0eee6;  /* cream */
