@@ -10,6 +10,7 @@
 	--s-color-bg-subtle: var(--s-brand-925);
 	--s-color-bg-surface: var(--s-brand-950);
 	--s-color-bg-titlebar: var(--s-brand-alpha-30);
+	--s-color-bg-footer: var(--s-brand-950);          /* pass 11: dark-mode footer parallels light cream-15 above cream-75 — brand-950 (L 0.14) above bg-app brand-975 (L 0.10), delta 0.04 */
 
 	/* Borders */
 	--s-color-border-subtle: var(--s-brand-850);
